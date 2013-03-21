@@ -1,0 +1,131 @@
+
+
+.deck-container {
+    font-family: "Helvetica Neue",sans-serif;
+    
+    color: white;
+    background: black;
+    position: relative;
+
+    .whitebg {
+        svg {
+            border-radius: 10px;            
+        }
+        background:white;
+        box-shadow: 0 0 10px white; 
+        border: 2px solid black;
+        border-radius: 10px;
+    }
+    
+    p.deck-status {
+        position: absolute;
+        left: 40%;
+        color: #888;
+        font-size: 10px; // for very small projectors
+    }
+    
+    >.slide.title-slide, >.slide.title {
+        font-size: 80%;
+        background: url(bg2.jpg) bottom right no-repeat;
+        h1 {
+            transform: none; /* undo default style! */
+            margin-top: 1em;
+            margin-bottom: 0;
+        }
+        h2 {
+            text-align: center;
+            margin-top: 0;
+            margin-bottom: 1em;
+            padding-top: 0;
+            color: rgb(255, 100, 165);
+            border-bottom: 0;
+        }
+        h3 {
+            text-align: center;
+            margin-top: 0em;
+            margin-bottom: 2em;
+            color: rgb(204, 204, 204);
+        }
+    }
+    
+    >.slide.title {
+        h1 {
+            margin-top: 4em;
+        }
+    }
+    
+    >.slide {
+        background: url(bg.svg) bottom right no-repeat;
+    }
+    
+    >.slide.nobg {
+        background: none;
+    }
+    
+    >.slide.noh {
+        h1,h2 {display: none;}
+    }
+    
+    >.slide.noimgblock img {display: inline;}
+    
+    >.slide.svgfloatleft div.hasSVG {
+        float:left;
+    }
+    >.slide {
+        
+        .full750 {
+            margin-left: 25px;
+        }
+        
+        h1 {
+            position: static;
+            margin-top: 2em;
+        }
+        h2 {
+            padding-top: 0;
+            margin-bottom: 0;
+            color: rgb(255, 100, 165);
+            border-bottom: 0.1em solid rgb(255, 255, 238);
+            font-size: 40px;
+        }
+        h3 {
+            margin-top:5em;
+            text-align:center;
+        }
+
+        >ul {
+            >li ul {
+                >li ul {
+                    >li {    
+                        margin: 0.2em;
+                        font-size: 0.8em;
+                        margin-bottom: 0px;
+                    }
+                    color: white;
+                    margin-bottom: 0px;
+                }
+                >li {
+                    margin: 0.2em;
+                    font-size: 0.85em;
+                    color: rgb(221, 221, 255);
+                    margin-bottom: 0px;
+                }
+                line-height: 0.85em;
+                list-style: square outside none;
+                margin-bottom: 0px;
+            }
+            list-style: disc outside none;
+            li {
+                margin-top: 0.5em;
+                margin-bottom: 0px;
+                margin-right: 0px;
+                padding-left: 0.1em;
+            }
+        }
+        
+        margin-bottom:0;
+        font-size: 30px;
+        
+    }
+}
+

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+        <!-- PROVIDE METADATA -->
+        <!-- ================ -->
+        <title>Django Noob</title>
+        <meta name="author" content="Claire Reynaud">
+            
+	<!-- Required stylesheet -->
+	<link rel="stylesheet" href="deck.js/core/deck.core.css">
+
+	<!-- Style theme. More available in deck.js/themes/style/ or create your own. -->
+	<!--link rel="stylesheet" href="deck.js/themes/style/swiss.css"-->
+	<link rel="stylesheet" href="theme.css">
+
+	<!-- Transition, for your audience, use it only for short presentations, see deck.js/themes/transition -->
+	<!--link rel="stylesheet" href="deck.js/themes/transition/fade.css"-->
+	
+	<!-- Required Modernizr file -->
+	<script src="deck.js/modernizr.custom.js"></script>
+        <!-- Required JS files. -->
+        <script src="deck.js/jquery-1.7.2.min.js"></script>
+        <script src="deck.js/core/deck.core.js"></script>
+
+        <!-- PROVIDE EXTENSIONS: JS and CSS files -->
+        <!-- ============================ -->
+        <!-- proper slide scaling (type 's' to disable) -->
+        <script src="deck.js/extensions/fit/deck.fit.js"></script>
+        <link rel="stylesheet" href="deck.js/extensions/fit/deck.fit-fs.css"> <!-- fit to window -->
+        <!-- animations, svg etc (better to include it after the 'status' extension... so see below) -->
+        <!-- math equations -->
+        <script src="deck.js/libs/display-latex2.user.js"></script>
+        <script src="deck.js/extensions/simplemath/deck.simplemath.js"></script>
+        <!-- smart syntax -->
+        <script src="deck.js/extensions/smartsyntax/deck.smartsyntax.js"></script>
+        <!-- clone by typing 'c'   (popups a slave presentation) (uses "clone snippet" at the end of the page) -->
+        <script src="deck.js/extensions/clone/deck.clone.js"></script>
+        <!-- goto by typing 'g'   (uses "goto snippet" at the end of the page) -->
+	<link rel="stylesheet" href="deck.js/extensions/goto/deck.goto.css">
+        <script src="deck.js/extensions/goto/deck.goto.js"></script>
+        <!-- slide number indicator   (uses "status snippet" at the end of the page) -->
+        <link rel="stylesheet" href="deck.js/extensions/status/deck.status.css">
+        <script src="deck.js/extensions/status/deck.status.js"></script>
+        <!-- navigation buttons   (uses "navigation snippet" at the end of the page) -->
+	<link rel="stylesheet" href="deck.js/extensions/navigation/deck.navigation.css">
+        <script src="deck.js/extensions/navigation/deck.navigation.js"></script>
+        <!-- slide selector by typing 'm' -->
+        <script src="deck.js/extensions/menu/deck.menu.js"></script>
+	<link rel="stylesheet" href="deck.js/extensions/menu/deck.menu.css">
+        <!-- permalink   (uses "hash snippet" at the end of the page) -->
+        <link rel="stylesheet" href="deck.js/extensions/hash/deck.hash.css">
+        <script src="deck.js/extensions/hash/deck.hash.js"></script>
+        <!-- animations, svg etc (better to include it after the 'status' extension (to avoid huge fake slide numbers) -->
+        <script src="deck.js/extensions/step/deck.step.js"></script>
+        <script src="deck.js/extensions/events/deck.events.js"></script>
+        <script src="deck.js/extensions/anim/deck.anim.js"></script>
+        <script src="deck.js/libs/jquerysvg/jquery.svg.min.js"></script>
+        <script src="deck.js/libs/jquerysvg/jquery.svganim.min.js"></script>
+        <script src="deck.js/extensions/svg/deck.svg.js"></script>
+
+        <!-- Deck.js options (advanced) -->
+        <script>$(function() {$.deck('.slide', {
+                 // fitMarginX:100, fitMarginY:100, // uncomment to tune margin
+                 // fitMode: "stretched", // uncomment to strech
+                 dummy:""
+            });
+    });
+                </script>
+        <script src="autoshow.js"></script>
+        <link rel="stylesheet" href="autoshow.css">
+
+        <!-- override some style here if needed (or in an external file) -->
+        <style type="text/css">
+            /* example */ /*.slide b {color: blue;}
+            /* example */ /*.deck-container > .slide {border: 1px solid green;}
+            /* example */ /*body.has-clones .deck-container {background: lightslategrey;}
+            /* example */
+            /*.deck-container .slide.title-slide {font-size: 30%}
+            .deck-container .slide h3 {font-size: 80%}
+            .deck-container .slide h2 {font-size: 80%}
+            .deck-container .bigsvg {margin-top: -10px}
+            .slide b {color: blue;}*/
+            
+            .chartreuse span {background-color: chartreuse; color: black;}
+            .chartreuse em {font-size: 70%; color: chartreuse;}
+            .bottomright{position: absolute; right:0; bottom: 150px;}
+            .slide.myimgs img {display: inline; margin-left:2em;}
+            .slide.linkinh h2 a {color: white; text-decoration:none}
+            .slide.smallh2 h2 {font-size: 2.25em}
+            .slide.overlay ul>li {margin-left: 2em; -/ color:red; text-shadow: 0.05em 0.05em 0.01em black, 0 0 0.1em white; z-index:10*/}
+            .slide.overlay img.faded {opacity: .15}
+            .slide .halfsizetransform {transform: scale(0.5, 0.5); -webkit-transform: scale(0.5, 0.5);}
+            .slide em, .slide tt {color:chartreuse;}
+            .slide.whitebghasmargin .whitebg, .slide.fullsvg {margin: 25px;}
+            .deck-container .nav {-webkit-transform: translate(0, 200px) scale(0.8, 0.8) ; transform: translate(0, 200px) scale(0.8, 0.8);}
+            .slide .unpad {margin-top: -300px;}
+            
+            .crazy {transition: all 1s ease-in-out; }
+            .crazy:hover {
+        transform: rotate(90deg);
+            }
+        </style>
+    </head>
+
+
+<body>
+This text should not be displayed if everything goes well: use left/right arrow keys to browse the presentation.<br/>
+
+<div class="deck-container">
+
+ <!-- this presentation uses smart syntax -->
+
+ <!-- todo virer les titres pour donner le contexte, utiliser les images noob content, pas content etc... -->
+ <!-- ne pas expliquer ce qu'il savent très bien -->
+ <!-- les solutions noob c'est pas spécifique à Django -->
+ <!-- Correcteur orthographique -->
+ <section class="smart">
+    == ==[title-slide]
+    <h2 style="font-size: 4em; margin-bottom: 20px">Débuter en Python et Django</h2>
+    <h3 style="font-size: 2em; margin-top: 0px">The noob, the mad and the pony</h3>
+     @<center>
+    <div class="autoshow">
+       <div><img src="images/poule.png"></div>
+       <div><img src="images/angry-birds.png"></div>
+       <div><img src="images/django-pony.png"></div>
+    </div>
+   @</center>
+
+    ==Ma vie, mon oeuvre==[title]
+
+    =Kelkoo=
+    <img src="images/java.png" style="height: 250px; margin-top: 40px" class="slide">
+    <h3 class="slide" style="margin-top: 40px !important">5 minutes / 3 mois</h3>
+
+    =Trango VP=
+    <img src="images/java.png" style="height: 200px; margin-top: 20px; margin-left: 145px; margin-right: 20px; float: left" class="slide">
+    <img src="images/eclipse.png" style="height: 200px; margin-top: 20px; margin-left: 20px; float: left" class="slide">
+    <img src="images/Linux.png" style="height: 200px; margin-top: 20px; margin-left: 30px; float: left" class="slide">
+    <img src="images/arm.png" style="height: 200px; margin-top: 20px;" class="slide">
+
+    =VMWare=
+    <img src="images/java.png" style="height: 200px; margin-top: 10px; float: left; margin-left: 130px" class="slide">
+    <img src="images/gwt.png" style="height: 170px; float: left; margin-top: 25px; margin-left: 60px; " class="slide">
+    <img src="images/spring.png" style="height: 200px; float: left; margin-left: 30px" class="slide">
+    <h3 class="slide" style="margin-top: 0px !important">AbstractSingletonProxyFactoryBean</h3>
+    <img src="images/android.png" style="width: 250px;" class="slide">
+
+    =Epyx=
+    <img src="images/android.png" style="width: 260px; margin-left: 160px; float: left" class="slide">
+    <img src="images/Apple.png" style="width: 160px; margin-top: 15px; float: left" class="slide">
+    <img src="images/django-unchained.jpg" style="width: 650px; -webkit-filter: grayscale(35%);" class="slide">
+
+    =Ma vie, mon oeuvre=
+    * Beaucoup de Java[slide]
+    * De l'embarqué et du mobile[slide]
+    * Du Linux[slide]
+    * Du backend, services REST[slide]
+    * Pas de python[slide]
+    * Pas de web, javascript, css[slide]
+    ==The noob, the mad and the pony==[title]
+
+    ==Python==[title]
+
+    =Des problèmes de noob=
+    * Python 3[slide]
+    * Backward compatibility[slide]
+    * Virtualenv[slide]
+
+    =Des problèmes de noob qui vient du Java=
+    <img src="images/boite-a-formes.png" style="width: 600px">
+
+    =Des problèmes de noob qui vient du Java=
+    * Autocompletion :/[slide]
+    * 80 caractères[slide]
+    * len(truc) mais truc.machin() ?[slide]
+
+    =Des choses cools aussi :)=
+    * Simple[slide]
+    * Concis...[slide]
+    * ...mais étonnament compréhensible[slide]
+    * Pas 10 façons d'écrire la même chose[slide]
+
+    ==Django==[title]
+
+    =Beaucoup de choses à apprendre=
+    * Python[slide]
+    * Django[slide]
+    * HTML[slide]
+    * CSS[slide]
+    * Javascript[slide]
+
+    =Packages=
+    <h3>Lequel choisir ?</h3>
+
+    =settings.py=
+    <h3>Chemins absolus ?</h3>
+
+    =settings.py=
+    <h3>Certes, ce n'est pas du xml, mais...</h3>
+
+    =models.py=
+    <h3>Du pseudo sql qui n'en est pas</h3>
+
+    =Meta=
+    <h3>O_o</h3>
+
+    =Class Based Views=
+    <img src="images/poule.png" style="width: 400px">
+
+    =Angry Noob=
+    <img src="images/angry-birds.png" style="width: 700px">
+
+    =Current transaction is aborted=
+    <img src="images/transaction.png" style="width: 700px">
+
+    =Templates, appels de méthodes et filtres=
+    * Pourquoi est-ce qu'on ne peut pas appeller de méthodes dans les templates ?[slide]
+    * "Hum, je vais mettre ça dans le contexte"[slide]
+    * Définition de filtres ?[slide]
+
+    =Debug=False=
+    <h3>??</h3>
+
+    =Command line=
+    <img src="images/terminal.png" style="width: 700px">
+
+    =Magic powers=
+    <img src="images/django-pony.png" style="width: 600px;">
+
+    =Modifié : hop, reloadé !=
+    <img src="images/reload.png" style="width: 700px;">
+
+    =Infos de debug dans le navigateur=
+    <img src="images/filter_space.png" style="width: 700px;">
+
+    =L'admin=
+    <h3>Plus besoin d'aller grailler dans la DB en prod, \o/ !!</h3>
+
+    =Django Debug Toolbar=
+    <h3><3</h3>
+    <h3 style="margin-top: 0px !important;" class="slide">Pas là par défaut :(</h3>
+
+    =Web=
+    <img src="images/html5.png" style="width: 700px">
+
+    =Tests full stack=
+    <h3>Sans mocks, sans selenium</h3>
+
+    =Pycharm=
+    <img src="images/pycharm.png" style="width: 700px">
+
+    ==Django: life, the universe and everything==[title]
+
+    =Django et javascript=
+    <h3>Ça se combine bien ?</h3>
+
+    =Django et javascript=
+    <h3>Real time web ?</h3>
+
+    =Django et javascript=
+    <h3>Mobile web apps + offline ?</h3>
+
+    =DjangoCon Europe=
+    <img src="images/djangocon.png" style="margin-top: 3em; width: 400px">
+
+    ==Que faire pour que l'apprentissage se passe bien ?==[title]
+
+    =Que faire ?=
+    <h3 class="slide" style="margin-top: 150px !important;">Note: pas spécifique à Python/Django</h3>
+    <h3 class="slide" style="margin-top: 0px !important;">Ça marche encore quand le noob est devenu une star du rock ;)</h3>
+
+    =Revues de code=
+    <img src="images/pull_request.png" style="width: 550px">
+
+    =Tests=
+    <img src="images/test.png" style="width: 600px; float: left">
+    <img src="images/jenkins.png" style="width: 500px; margin-top: -150px; float: right">
+
+    =Django, je recommande à une copine ?=
+    <h3 class="slide" style="margin-top: 100px !important;">Ouiiii !!</h3>
+
+    ==Merci :) !==[title]
+
+</section>
+
+<!-- end of the presentation -->
+
+
+<!-- deck.hash snippet -->
+<a href="." title="Permalink to this slide" class="deck-permalink">#</a>
+<!-- deck.status snippet -->
+<p class="deck-status">
+       Django noob  − Claire Reynaud −
+	<span class="deck-status-current"></span>
+	/
+	<span class="deck-status-total"></span>
+</p>
+<!-- deck.goto snippet -->
+<form action="." method="get" class="goto-form">
+	<label for="goto-slide">Go to slide:</label>
+	<input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+	<datalist id="goto-datalist"></datalist>
+	<input type="submit" value="Go">
+</form>
+<!-- deck.navigation snippet -->
+<a href="#" class="nav deck-prev-link" title="Previous">&#8592;</a>
+<a href="#" class="nav deck-next-link" title="Next">&#8594;</a>
+<!-- deck.clone snippet: simple red box with top-left corner as cursor position -->
+<!--div class="clonepointer" style="position:absolute; width:20px; height:20px; background:red; z-index:10"></div-->
+<!-- deck.clone snippet: simple green box with center as cursor position -->
+<!--div class="clonepointer" style="position:absolute; z-index:11"><div style="margin: -13px 0 0 -13px; width:18px; height:18px; border:4px solid green;"></div></div-->
+
+<!--div class="clonepointer" style="position:absolute; z-index:11"><div style="margin: -13px 0 0 -13px; width:18px; height:18px; border-top:2px  solid red; border-left:2px  solid red;"></div></div-->
+<div class="clonepointer" style="position:absolute; z-index:11"><div style="margin: -3px 0 0 -3px; width:3px; height:3px; border-top:2px  solid red; border-left:2px  solid red;"></div></div>
+
+
+</div> <!-- end of deck container -->
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+.deck-container {
+  font-family: "Helvetica Neue",sans-serif;
+  color: white;
+  background: black;
+  position: relative; }
+  .deck-container .whitebg {
+    background: white;
+    box-shadow: 0 0 10px white;
+    border: 2px solid black;
+    border-radius: 10px; }
+    .deck-container .whitebg svg {
+      border-radius: 10px; }
+  .deck-container p.deck-status {
+    position: absolute;
+    left: 40%;
+    color: #888;
+    font-size: 10px; }
+  .deck-container > .slide.title-slide, .deck-container > .slide.title {
+    font-size: 80%;
+    background: url(bg2.jpg) bottom right no-repeat; }
+    .deck-container > .slide.title-slide h1, .deck-container > .slide.title h1 {
+      transform: none;
+      /* undo default style! */
+      margin-top: 1em;
+      margin-bottom: 0; }
+    .deck-container > .slide.title-slide h2, .deck-container > .slide.title h2 {
+      text-align: center;
+      margin-top: 0;
+      margin-bottom: 1em;
+      padding-top: 0;
+      color: #ff64a5;
+      border-bottom: 0; }
+    .deck-container > .slide.title-slide h3, .deck-container > .slide.title h3 {
+      text-align: center;
+      margin-top: 0em;
+      margin-bottom: 2em;
+      color: #cccccc; }
+  .deck-container > .slide.title h1 {
+    margin-top: 4em; }
+  .deck-container > .slide {
+    background: url(bg.svg) bottom right no-repeat; }
+  .deck-container > .slide.nobg {
+    background: none; }
+  .deck-container > .slide.noh h1, .deck-container > .slide.noh h2 {
+    display: none; }
+  .deck-container > .slide.noimgblock img {
+    display: inline; }
+  .deck-container > .slide.svgfloatleft div.hasSVG {
+    float: left; }
+  .deck-container > .slide {
+    margin-bottom: 0;
+    font-size: 30px; }
+    .deck-container > .slide .full750 {
+      margin-left: 25px; }
+    .deck-container > .slide h1 {
+      position: static;
+      margin-top: 2em; }
+    .deck-container > .slide h2 {
+      padding-top: 0;
+      margin-bottom: 0;
+      color: #ff64a5;
+      border-bottom: 0.1em solid #ffffee;
+      font-size: 40px; }
+    .deck-container > .slide h3 {
+      margin-top: 5em;
+      text-align: center; }
+    .deck-container > .slide > ul {
+      list-style: disc outside none; }
+      .deck-container > .slide > ul > li ul {
+        line-height: 0.85em;
+        list-style: square outside none;
+        margin-bottom: 0px; }
+        .deck-container > .slide > ul > li ul > li ul {
+          color: white;
+          margin-bottom: 0px; }
+          .deck-container > .slide > ul > li ul > li ul > li {
+            margin: 0.2em;
+            font-size: 0.8em;
+            margin-bottom: 0px; }
+        .deck-container > .slide > ul > li ul > li {
+          margin: 0.2em;
+          font-size: 0.85em;
+          color: #ddddff;
+          margin-bottom: 0px; }
+      .deck-container > .slide > ul li {
+        margin-top: 0.5em;
+        margin-bottom: 0px;
+        margin-right: 0px;
+        padding-left: 0.1em; }
